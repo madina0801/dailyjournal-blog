@@ -30,6 +30,18 @@ app.get("/contact", function(req, res) {
 	res.render("contact", {contactContent});
 })
 
+// Route handlers
+app.post("/", function(req, res) {
+	res.redirect("/");
+})
+
+app.post("/about", function(req, res) {
+	res.redirect("/about");
+})
+
+app.post("/contact", function(req, res) {
+	res.redirect("/contact");
+})
 
 
 app.listen(3000, console.log("Listening on 3000!"));
