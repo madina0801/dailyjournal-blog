@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-// App
+// Render views pages
 app.get("/", function(req, res) {
 	res.render("home", {homeStartingContent});
 })
@@ -30,7 +30,12 @@ app.get("/contact", function(req, res) {
 	res.render("contact", {contactContent});
 })
 
-// Route handlers
+app.get("/compose", function(req, res) {
+	res.render("compose");
+})
+
+
+// Nav links route handlers
 app.post("/", function(req, res) {
 	res.redirect("/");
 })
@@ -42,6 +47,8 @@ app.post("/about", function(req, res) {
 app.post("/contact", function(req, res) {
 	res.redirect("/contact");
 })
+
+
 
 
 app.listen(3000, console.log("Listening on 3000!"));
