@@ -11,7 +11,7 @@ const aboutContent = "Mauris finibus lacus felis, ut rhoncus dolor commodo a. Su
 
 const contactContent = "Vestibulum eget ante sed purus euismod ultricies id in erat. Donec euismod convallis ipsum sit amet sodales. Vestibulum sed neque nisi.";
 
-
+const posts = [];
 // Parse data and use static files
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -51,9 +51,13 @@ app.post("/contact", function(req, res) {
 
 // Compose page
 app.post("/compose", function (req,res ) {
-	console.log(req.body.postTitle);
+	const post = {
+		title: req.body.postTitle,
+		content: req.body.postBody,
+	}
+	posts.push(post);
+
+	res.redirect("/");
 })
-
-
 
 app.listen(3000, console.log("Listening on 3000!"));
