@@ -1,4 +1,3 @@
-
 .container-fluid {
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -24,7 +23,6 @@
 }
 
 .footer {
-	position: absolute;
 	text-align: center;
 	bottom: 0;
 	width: 100%;
@@ -33,7 +31,7 @@
 }
 
 .footer p {
-	margin-top: 25px;
+	padding-top: 1rem;
 	font-size: 1rem;
 	color: #fdf0d5;
 }

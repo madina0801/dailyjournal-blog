@@ -49,6 +49,11 @@ app.post("/contact", function(req, res) {
 })
 
 
+// Compose page
+app.post("/compose", function (req,res ) {
+	console.log(req.body.postTitle);
+})
+
 
 
 app.listen(3000, console.log("Listening on 3000!"));
