@@ -1,4 +1,5 @@
 <%- include("partials/header") %>
+<div class="container-fluid">
 <h1>Compose</h1>
 <div class="form-group">
   <form action="/compose" method="POST">
@@ -8,5 +9,6 @@
     <textarea class="form-control" name="postBody" id="post" cols="30" rows="5"></textarea>
     <button class="btn btn-dark mt-3" type="submit">Publish</button>
   </form>
+</div>
 </div>
 <%- include("partials/footer") %>
