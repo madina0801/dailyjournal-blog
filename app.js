@@ -55,9 +55,8 @@ app.get("/posts/:post", function (req, res) {
   const requestedPost = req.params.post;
   for (p of posts) {
     if (_.lowerCase(p.title) === requestedPost || _.kebabCase(p.title) === requestedPost) {
-      console.log("Found match!");
-						console.log(requestedPost);
-    } else console.log("Nothing found!");
+      res.render("post", {	postsTitle: p.title,	postsContent: p.content });
+    }
   }
 });
 
